@@ -1,4 +1,8 @@
-'''n=int(input())
+creating a matrix with some x and 1 like 1 is the bishop which will move in diognal , in matrix it can move reverse diagoanal too,
+1 should make diagonls then play a game and do fuck
+
+
+n=int(input())
 m=[list(map(int,input().split())) for _ in range(n)]
 for i in range(n):
     for j in range(n):
@@ -45,33 +49,7 @@ for i in range (n):
         if Matrix[i][j] == 1:
             check (i, j)
 print ((n * n) - len (set (Index)))
-print(Matrix)'''
+print(Matrix)
 
-n = int (input ())
-Matrix = []
-for i in range (n):
-    List = list (map (int, input ().split ()))
-    Matrix.append (List)
-
-Index = []
-def check (i, j):
-    for x in range (n):
-        for y in range (n):
-            if x + y == i + j or x - y == i - j:
-                Index.append ((x, y))
-
-for i in range (n):
-    for j in range (n):
-        if Matrix[i][j] == 1:
-            check (i, j)
-            
-print ((n * n) - len (set (Index)))
-Index = list (set (Index))
-for i in range (n):
-    for j in range (n):
-        k = (i, j) in Index
-        if k == False:
-            Matrix[i][j] = "X"
-print (Matrix)
 
 
